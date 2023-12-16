@@ -17,11 +17,11 @@
 
             while($row=$resultant->fetch_assoc())
             
-                $response['user']=$row;
+                $response['user']=$row["KH_HoTen"];
                 $response['error']="200";
                 $response['message']="Login successfully";
             }else{
-                $response['user']=(object)[];
+                $response['user']='';
                 $response['error']="400";
                 $response['message']="Wrong credentials";
 
@@ -29,7 +29,7 @@
         
             
         }else{
-            $response['user']=(object)[];
+            $response['user']='';
             $response['error']="400";
             $response['message']="Your account is not exist!";
         }

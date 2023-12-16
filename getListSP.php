@@ -1,5 +1,5 @@
 <?php
-    require("connect.php");
+    require("dbConnect.php");
     $mangsp = array();
     
     $query = "select * from SanPham limit 10";

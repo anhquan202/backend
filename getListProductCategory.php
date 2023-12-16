@@ -1,5 +1,5 @@
 <?php
-    require("connect.php");
+    require("dbConnect.php");
     $mangsp = array();
     $maLoai = $_GET["LSP_MaLoai"];
     $page = $_GET["page"];

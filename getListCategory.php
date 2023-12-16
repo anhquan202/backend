@@ -1,5 +1,5 @@
 <?php
-    require("connect.php");
+    require("dbConnect.php");
     $mangCategory = array();
     
     $query = "select * from LoaiSP";

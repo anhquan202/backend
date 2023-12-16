@@ -1,5 +1,5 @@
 <?php
-    require("connect.php");
+    require("dbConnect.php");
     
     $maSP = $_GET["SP_MaSP"];
     $query = "select * from CTSanPham where CTSP_SP_MaSP = {$maSP}";

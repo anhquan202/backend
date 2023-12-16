@@ -1,5 +1,5 @@
 <?php
-    require("connect.php");
+    require("dbConnect.php");
     $mangsp = array();
     $tensp = $_GET["tensp"];
     $page = $_GET["page"];
