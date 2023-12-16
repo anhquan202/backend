@@ -21,7 +21,7 @@
                 $response['error']="200";
                 $response['message']="Login successfully";
             }else{
-                $response['user']=(object)[];
+                $response['user']='';
                 $response['error']="400";
                 $response['message']="Wrong credentials";
 
@@ -29,7 +29,7 @@
         
             
         }else{
-            $response['user']=(object)[];
+            $response['user']='';
             $response['error']="400";
             $response['message']="Your account is not exist!";
         }
