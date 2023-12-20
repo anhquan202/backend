@@ -10,14 +10,13 @@
        
         if(mysqli_num_rows($result)>0){ 
 
-            $checkUserquery="SELECT KH_Email, KH_Password FROM KhachHang WHERE KH_Email='$email' and KH_Password='$password'";
+            $checkUserquery="SELECT * FROM KhachHang WHERE KH_Email='$email' and KH_Password='$password'";
             $resultant=mysqli_query($conn,$checkUserquery);
             
             if(mysqli_num_rows($resultant)>0){
 
             while($row=$resultant->fetch_assoc())
-            
-                $response['user']=$row["KH_HoTen"];
+                $response['user'] = $row;
                 $response['error']="200";
                 $response['message']="Login successfully";
             }else{
@@ -25,8 +24,7 @@
                 $response['error']="400";
                 $response['message']="Wrong credentials";
 
-            }
-        
+            } 
             
         }else{
             $response['user']='';
