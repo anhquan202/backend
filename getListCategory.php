@@ -5,7 +5,7 @@
     $query = "select * from LoaiSP";
     $data = $conn->query($query) or die($conn->error);
     if($data->num_rows == 0){
-        echo "Khong co du lieu";
+        echo json_encode($mangCategory);
     }
     else{
         while($row = $data->fetch_assoc()){
